@@ -1,0 +1,238 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+li,
+p,
+ul,
+ol {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+/* 
+====================
+==== 主体框架
+====================
+*/
+body>* {
+    color: #666;
+    width: 90%;
+}
+
+header {
+    margin: 10px 0;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+
+/* 
+====================
+==== 表格界面
+====================
+*/
+
+#tableBox {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#tableBox>section {
+    margin: 20px 0;
+    background-color: #eee;
+    color: #666;
+    width: 100%;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+#tableBox>section>h2 {
+    margin-bottom: 10px;
+}
+
+/* #tableBox>section>p {
+    margin-bottom: 5px;
+    padding: 10px 0;
+    font-size: 14px;
+    box-sizing: border-box;
+} */
+
+#tableBox th,
+#tableBox th {}
+
+#tableBox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tableBox thead {
+    border-bottom: 2px dotted #ccc;
+}
+
+#tableBox th,
+#tableBox td {
+    border: 3px dotted #ccc;
+    border-width: 0 0px;
+    padding: 8px 0;
+}
+
+#tableBox th:hover,
+#tableBox td:hover,
+#tableBox h2:hover {
+    background-color: #ddd;
+}
+
+#tableBox th:empty::after,
+#tableBox td:empty::after {
+    content: "—";
+    color: #aaa;
+}
+
+
+/* 
+====================
+==== 控件-添加表格
+====================
+*/
+#addTable {
+    border: 0;
+    outline: 0;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px 0;
+
+    background-color: #eee;
+    color: #666;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+/*
+====================
+==== 控件-文本编辑
+====================
+*/
+.editBox {
+    border: 0;
+    user-select: 0;
+    background-color: transparent;
+
+    font: inherit;
+    outline: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 
+====================
+==== 控件-菜单界面
+====================
+*/
+
+#menu {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    position: absolute;
+}
+
+#menu>section {
+    background-color: #eee;
+    min-width: 20%;
+    min-height: 20%;
+    border-radius: 10px;
+    padding: 5px 10px;
+    max-width: 90%;
+    max-height: 90%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu>section>* {
+    min-width: 90%;
+}
+
+#menu p {
+    margin-bottom: 10px;
+}
+
+#menu textarea {
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 10px 0;
+}
+
+#menu .list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+}
+
+#menu .list>* {
+    margin-bottom: 10px;
+    padding: 2px 5px;
+    box-sizing: border-box;
+    border: 2px dotted #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#menu .buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menu .buttons>* {
+    margin: 10px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    border: 2px dotted #ddd;
+    border-radius: 5px;
+}
+
+#menu ul>*:hover {
+    background-color: #ddd;
+}
